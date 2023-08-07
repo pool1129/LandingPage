@@ -1,0 +1,8 @@
+{
+  "name": "LandingPage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/pool1129/LandingPage.git",
+  "author": "wwl-jky <jky@winwinlab.co.kr>",
+  "license": "MIT"
+}
