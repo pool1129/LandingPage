@@ -1,4 +1,16 @@
+@import url('https://webfontworld.github.io/sunn/SUIT.css');
+@import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
+
+::selection {
+  background-color: #899E70;
+  color: #fff;
+}
+
 a, li {
   text-decoration: none;
   list-style: none;
+}
+
+p , h2{
+  margin: 0;
 }
