@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios'
 import AOS from "aos";
 
 import "aos/dist/aos.css";
@@ -11,19 +12,25 @@ import appleLogo from '../../assets/Icon_apple.png';
 import googleLogo from '../../assets/Icon_google.png';
 
 const Gwangmyeong = () => {
+    const [scrollPosition, setScrollPosition] = useState(0);
+
     /// aos 초기화
     useEffect(() => {
         AOS.init();
     })
 
     /// scroll 이벤트
-    const [scrollPosition, setScrollPosition] = useState(0);
     const updateScroll = () => {
         setScrollPosition(window.scrollY || document.documentElement.scrollTop);
     };
 
     useEffect(() => {
         window.addEventListener("scroll", updateScroll);
+
+        /// 공지사항
+        axios.get('https://merry-eddy.co.kr/fgm/41210/news')
+            .then((Response)=>{console.log(Response.data)})
+            .catch((Error)=>{console.log(Error)})
     }, []); 
 
     return (

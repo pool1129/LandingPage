@@ -81,19 +81,25 @@ main {
         }
 
         hr {
-            width: 0px;
+            width: 80px;
             height: 2px;
             background-color: #fff;
             border-radius: 1px;
             transition: all ease 2s 0s;
             margin: 0;
-            opacity: 0;
-            width: 80px;
             opacity: 1;
+            animation: lineWidth 1s;
+        }
 
-            &.active {
-                width: 80px;
+        @keyframes lineWidth {
+            0% {
+                opacity: 0;
+                width: 0;
+            }
+
+            100% {
                 opacity: 1;
+                width: 80px;
             }
         }
     }

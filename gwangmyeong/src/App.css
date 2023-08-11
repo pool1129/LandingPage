@@ -11,6 +11,6 @@ a, li {
   list-style: none;
 }
 
-p , h2{
+p , h2, h3{
   margin: 0;
 }

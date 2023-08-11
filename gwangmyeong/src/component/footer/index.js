@@ -1,20 +1,34 @@
+import React, { useState } from "react";
+
 import styles from './footer.module.scss';
+import Privacy from "../../page/privacy";
 
 const Footer = () => {
-    return (
-        <footer>
-            <div className={styles.footerContainer}>
-                <ul className={styles.footerList}>
-                    <li><a href="/">서비스 피드백</a></li>
-                    <li><a href="/">개인정보 처리방침</a></li>
-                    <li><a href="/">서비스 문의</a></li>
-                </ul>
+    const [showPrivacyPop, setShowPrivacyPop] = useState(false);
 
-                <div className={styles.footerCopy}>
-                    <a>Copyright © Cookieparking. All rights reserved</a>
+    /// [개인정보처리방침] 이벤트
+    const togglePrivacy = (event) => {
+        setShowPrivacyPop(!showPrivacyPop)
+    };
+    
+    return (
+        <>
+            {showPrivacyPop ? <Privacy onClick={togglePrivacy} /> : null}
+
+            <footer>
+                <div className={styles.footerContainer}>
+                    <ul className={styles.footerList}>
+                        <li><a href="/">서비스 피드백</a></li>
+                        <li><a onClick={togglePrivacy}>개인정보 처리방침</a></li>
+                        <li><a href="/">서비스 문의</a></li>
+                    </ul>
+
+                    <div className={styles.footerCopy}>
+                        <a>Copyright © Cookieparking. All rights reserved</a>
+                    </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </>
     )
 }
 
