@@ -5,11 +5,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import styles from './gwangmyeong.module.scss';
 
-import mockup from '../../assets/Img_mockup.png';
+import screenshot1 from '../../assets/Img_screenshot1.png';
+import screenshot2 from '../../assets/Img_screenshot2.png';
+import screenshot3 from '../../assets/Img_screenshot3.png';
+import screenshot4 from '../../assets/Img_screenshot4.png';
+import screenshot5 from '../../assets/Img_screenshot5.png';
+
 import appIcon from '../../assets/Img_appIcon.png';
 import arrowDown from '../../assets/Icon_arrowDown.png';
 import appleLogo from '../../assets/Icon_apple.png';
 import googleLogo from '../../assets/Icon_google.png';
+
 
 const Gwangmyeong = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -52,7 +58,7 @@ const Gwangmyeong = () => {
 
                         <div className={styles.mockupWrap}>
                             <div className={styles.img_mockupMid}>
-                                <img src={mockup} alt="목업이미지"/>
+                                <img src={screenshot2} alt="목업이미지"/>
                             </div>
                             <div className={styles.img_appIcon}>
                                 <img src={appIcon} alt="어플아이콘"/>
@@ -83,7 +89,7 @@ const Gwangmyeong = () => {
                 <div className={styles.container}>
                     <div className={styles.mockupWrap}>
                         <div className={styles.img_mockupMid}>
-                            <img src={mockup} alt="목업이미지"/>
+                            <img src={screenshot1} alt="목업이미지"/>
                         </div>
                     </div>
 
@@ -96,7 +102,7 @@ const Gwangmyeong = () => {
                 <div className={styles.container}>
                     <div className={styles.mockupWrap}>
                         <div className={styles.img_mockupBig}>
-                            <img src={mockup} alt="목업이미지"/>
+                            <img src={screenshot2} alt="목업이미지"/>
                         </div>
                     </div>
 
@@ -152,7 +158,7 @@ const Gwangmyeong = () => {
 
                     <div className={styles.mockupWrap}>
                         <div className={styles.img_mockupBig}>
-                            <img src={mockup} alt="목업이미지"/>
+                            <img src={screenshot2} alt="목업이미지"/>
                         </div>
                         <div className={styles.mockupRound}></div>
                     </div>
@@ -163,10 +169,12 @@ const Gwangmyeong = () => {
                 <div className={styles.container}>
                     <div className={styles.mockupWrap}>
                         <div className={styles.img_mockupBig}>
-                            <img src={mockup} alt="목업이미지"/>
+                            <img src={screenshot3} alt="목업이미지"/>
                         </div>
 
-                        <div className={styles.img_mockupDetail}></div>
+                        <div className={styles.img_mockupDetail}>
+                            <img src={screenshot4} alt="목업이미지"/>
+                        </div>
                         <div className={styles.mockupRound}></div>
                     </div>
 
@@ -207,7 +215,7 @@ const Gwangmyeong = () => {
 
                     <div className={styles.mockupWrap}>
                         <div className={styles.img_mockupBig}>
-                            <img src={mockup} alt="목업이미지"/>
+                            <img src={screenshot5} alt="목업이미지"/>
                         </div>
 
                         <div className={styles.mockupRound}></div>
@@ -226,7 +234,7 @@ const Gwangmyeong = () => {
 
                     <div className={styles.mockupWrap}>
                         <div className={styles.img_mockupSmall}>
-                            <img src={mockup} alt="목업이미지"/>
+                            <img src={screenshot1} alt="목업이미지"/>
                         </div>
                     </div>
 

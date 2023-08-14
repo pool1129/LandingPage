@@ -164,19 +164,6 @@ main {
         right: 30px;
     }
 
-    .img_mockupDetail {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        bottom: 60px;
-        width: 405px;
-        height: 510px;
-        right: -45px;
-        background-color: #fff;
-        border-radius: 30px;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
-
     .mockupRound {
         background-color: #FF9147;
         border-radius: 50%;
@@ -530,6 +517,16 @@ main {
 
     .contentTitle {
         margin-bottom: 50px;
+    }
+
+    .mockupWrap{
+        display: flex;
+
+        .img_mockupDetail {
+            right: -210px;
+            position: absolute;
+            max-width: 590px;
+        }
     }
 
     .mockupRound {
