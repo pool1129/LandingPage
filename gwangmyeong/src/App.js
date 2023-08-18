@@ -10,9 +10,8 @@ import News from './page/news';
 function App() {
   return (
     <>
-      <Header/>
-
       <BrowserRouter>
+        <Header/>
         <Routes>
           <Route path="/" element={<Gwangmyeong/>}/>
           <Route path="/news" element={<News/>}/>

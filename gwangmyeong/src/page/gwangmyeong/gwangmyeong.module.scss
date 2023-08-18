@@ -4,11 +4,19 @@ main {
     font-family: 'SUIT';
     margin-top: 60px;
 
+    @include mobile{ 
+        margin-top: 48px;
+    }
+
     .updatePage, .listPage, .detailPage, .searchPage, .storePage{
         height: calc(100vh - 60px);
         max-height: 1080px;
         display: flex;
         align-items: center;
+
+        @include mobile{ 
+            height: calc(100vh - 48px);
+        }
     }
     
     .container {
@@ -23,6 +31,7 @@ main {
     width: 100%;
     position: relative;
     overflow: hidden;
+    display: none;
 
     .container {
         position: absolute;
@@ -142,6 +151,7 @@ main {
 }
 
 .mockupWrap {
+    display: none;
     position: relative;
 
     img {
@@ -180,6 +190,7 @@ main {
     height: 1500px;
     position: relative;
     overflow: hidden;
+    display: none;
 
     .backRound {
         background-color: #F79B52;
@@ -218,6 +229,7 @@ main {
     overflow: hidden;
     transform: rotate(180deg);
     z-index: -1;
+    display: none;
 
     .backRound {
         background-color: #F79B52;
@@ -251,6 +263,7 @@ main {
 .subPage {
     position: relative;
     height: 700px;
+    display: none;
 
     .container {
         display: flex;
@@ -288,6 +301,7 @@ main {
 
 .updatePage {
     padding: 200px 0;
+    display: none;
 
     .container {
         position: relative;
@@ -458,6 +472,11 @@ main {
         font-weight: 700;
         line-height: 70px;
 
+        @include mobile{ 
+            line-height: 42px;
+            margin-top: 10px;
+        }
+
         &.dark {
             color: #4F534E;
         }
@@ -489,6 +508,11 @@ main {
         @include fontSize(25px);
         font-weight: 600;
         color: #4F534E;
+
+        @include mobile{ 
+            margin-top: 20px;
+            line-height: 1.5;
+        }
     }
 }
 

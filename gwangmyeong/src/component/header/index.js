@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useMediaQuery } from 'react-responsive';
+import { useLocation } from "react-router-dom";
 
 import styles from './header.module.scss';
 
@@ -7,6 +8,7 @@ import { VscGrabber , VscChromeClose , VscChevronRight } from "react-icons/vsc";
 
 export default function  Header() {
     const isMobile = useMediaQuery({ maxWidth: 1024 })
+    const location = useLocation().pathname;
     const [menuActive, isMenuActive] = useState(false);
 
     /// 모바일 메뉴 클릭 이벤트
@@ -29,7 +31,9 @@ export default function  Header() {
                     :
                     <ul className={styles.headerList}>
                         {MENULIST.map((menu, index) => (
-                            <li key={index}><a href={menu.url}>{menu.title}</a></li>
+                            <li key={index} className={location === menu.url ? `${styles.active}` : ''}>
+                                <a href={menu.url}>{menu.title}</a>
+                            </li>
                         ))}
                     </ul>
                 }
@@ -68,6 +72,6 @@ const MENULIST = [
     {
         id: 2,
         title: '공지사항',
-        url: '/'
+        url: '/news'
     }
 ]

@@ -10,10 +10,10 @@
     font-size: $size;
 
     @include mobile{ 
-        @if $size / 2 <= 10px {
+        @if calc($size / 2) <= 10px {
             font-size: 13px;
         } @else {
-            font-size: ($size / 2);
+            font-size: (calc($size / 2));
         }
     }
 }

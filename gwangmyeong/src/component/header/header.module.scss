@@ -56,7 +56,6 @@ header {
 
     li {
         padding: 0 8px;
-        color: #4e5968;
 
         a {
             padding: 12px 10px;
@@ -67,10 +66,18 @@ header {
             cursor: pointer;
             background-color: transparent;
             text-align: left;
+            color: #888;
 
             &:hover {
                 background-color: rgba(2,32,71,.05);
+                color: #000;
+                font-weight: 600;
             }
+        }
+
+        &.active a{
+            color: #000;
+            font-weight: 600;
         }
     }
 }
