@@ -1,28 +1,23 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios'
+import React from "react";
 
 import styles from './privacy.module.scss';
 
+import { VscChromeClose } from "react-icons/vsc";
+
 const Privacy = (props) => {
-    const [content, setContent] = useState('');
-
-    /// 개인정보 처리방침
-    useEffect(() => {
-        axios.get('https://merry-eddy.co.kr/fgm/41210/privacy')
-            .then((res)=>{
-                setContent(res.data)
-            })
-            .catch((error)=>{console.log(error)})
-    }, []); 
-
     return (
         <div className={styles.pagePop}>
             <div className={styles.privacyPage}>
-                <button type="button" class={styles.btnClose} onClick={props.onClick}></button>
+                <button type="button" className={styles.btnClose} onClick={props.onClick}>
+                    <VscChromeClose/>
+                </button>
 
-                <h3>어디보자 개인정보 처리방침</h3>
+                <h3>개인정보 처리방침</h3>
 
-                <div className={styles.privacyContent} dangerouslySetInnerHTML={{__html : content}}></div>
+                <div className={styles.privacyContent}>
+                    <h4>[광명 찾자] 개인정보 처리방침</h4>
+                    <p>※ 본 앱은 개인정보를 수집하지 않습니다.</p>             
+                </div>
             </div>
 
         </div>

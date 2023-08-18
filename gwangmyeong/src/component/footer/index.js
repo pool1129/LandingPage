@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from './footer.module.scss';
 import Privacy from "../../page/privacy";
 
-const Footer = () => {
+export default function Footer() {
     const [showPrivacyPop, setShowPrivacyPop] = useState(false);
 
     /// [개인정보처리방침] 이벤트
@@ -24,12 +24,10 @@ const Footer = () => {
                     </ul>
 
                     <div className={styles.footerCopy}>
-                        <a>Copyright © Cookieparking. All rights reserved</a>
+                        <a>Copyright © MerryEddyHouse. All rights reserved</a>
                     </div>
                 </div>
             </footer>
         </>
     )
 }
-
-export default Footer;

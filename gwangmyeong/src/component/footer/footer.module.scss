@@ -1,5 +1,9 @@
+@import '../../utils';
+
 footer {
-    font-family: pretendard;
+    margin-top: 100px;
+
+    font-family: 'SUIT';
     border-top: 1px solid;
     border-top-color: rgba(0,27,55,.1);
 
@@ -12,13 +16,18 @@ footer {
         margin: 0 auto;
         padding: 0 40px;
         height: 100%;
+
+        @include mobile{ 
+            width: calc(100% - 40px);
+            padding: 0;
+        }
     }
 }
 
 .footerCopy {
     a {
         color: #9b9b9b;
-        font-size: 12px;
+        @include fontSize(12px);
         padding: 12px 10px;
     }     
 }
@@ -33,7 +42,7 @@ footer {
 
         a {
             padding: 12px 10px;
-            font-size: 15px;
+            @include fontSize(15px);
             line-height: 20px;
             color: currentColor;
             border-radius: 8px;

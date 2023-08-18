@@ -1,3 +1,5 @@
+@import '../../utils';
+
 main {
     font-family: 'SUIT';
     margin-top: 60px;
@@ -49,7 +51,7 @@ main {
         margin: 70px 0 0 145px;
 
         h2 {
-            font-size: 110px;
+            @include fontSize(110px);
             color: #fff;
             font-family: 'TheJamsil';
             margin-bottom: 20px;
@@ -69,7 +71,7 @@ main {
         }
 
         p {
-            font-size: 50px;
+            @include fontSize(50px);
             font-weight: 500;
             color: #fff;
 
@@ -108,7 +110,7 @@ main {
         text-align: center;
 
         span, p { 
-            font-size: 25px;
+            @include fontSize(25px);
             font-weight: 500;
             color: #fff;
             word-break: keep-all;
@@ -193,7 +195,7 @@ main {
         &:after {
             content: '';
             display: inline-block;
-            background-image: url(../../assets/background.png);
+            background-image: url(../../assets/img/background.png);
             background-repeat: no-repeat;
             background-size: contain;
             max-width: 1920px;
@@ -231,7 +233,7 @@ main {
         &:after {
             content: '';
             display: inline-block;
-            background-image: url(../../assets/background.png);
+            background-image: url(../../assets/img/background.png);
             background-repeat: no-repeat;
             background-size: contain;
             max-width: 1920px;
@@ -445,14 +447,14 @@ main {
 
     small {
         color: #FF9147;
-        font-size: 25px;
+        @include fontSize(25px);
         font-weight: 600;
     }
 
     h3 {
         margin-top: 20px;
         color: #fff;
-        font-size: 55px;
+        @include fontSize(55px);
         font-weight: 700;
         line-height: 70px;
 
@@ -476,7 +478,7 @@ main {
     }
 
     p {
-        font-size: 40px;
+        @include fontSize(40px);
         font-weight: 600;
         color: #4F534E;
     }
@@ -484,7 +486,7 @@ main {
     > span {
         display: inline-block;
         margin-top: 50px;
-        font-size: 25px;
+        @include fontSize(25px);
         font-weight: 600;
         color: #4F534E;
     }
@@ -586,7 +588,7 @@ main {
             background-color: rgba(0, 12, 30, 0.8);
             color: rgb(255, 255, 255);
             padding: 10px 20px;
-            font-size: 15px;
+            @include fontSize(15px);
             font-weight: 600;
             line-height: 24px;
             border-radius: 7px;

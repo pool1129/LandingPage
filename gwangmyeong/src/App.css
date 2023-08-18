@@ -2,15 +2,34 @@
 @import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
 
 ::selection {
-  background-color: #899E70;
+  background-color: #424242;
   color: #fff;
 }
 
 a, li {
   text-decoration: none;
   list-style: none;
+  color: currentColor;
 }
 
 p , h2, h3{
   margin: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+svg {
+  width: 18px;
+  height: 18px;
+  color: currentColor;
+  cursor: pointer;
 }
