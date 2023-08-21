@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { useMediaQuery } from 'react-responsive';
 import AOS from "aos";
 
 import "aos/dist/aos.css";
@@ -10,23 +11,34 @@ import screenshot3 from '../../assets/img/Img_screenshot3.png';
 import screenshot4 from '../../assets/img/Img_screenshot4.png';
 import screenshot5 from '../../assets/img/Img_screenshot5.png';
 
-import appIcon from '../../assets/img/Img_appIcon.png';
-import arrowDown from '../../assets/img/Icon_arrowDown.png';
-import appleLogo from '../../assets/img/Icon_apple.png';
-import googleLogo from '../../assets/img/Icon_google.png';
+import IconApp from '../../assets/img/Img_appIcon.png';
+import IconArrowDown from '../../assets/img/Icon_arrowDown.png';
+import IconApple from '../../assets/img/Icon_apple.png';
+import IconGoogle from '../../assets/img/Icon_google.png';
+import IconArrow from '../../assets/svg/arrow.svg';
 
 const Gwangmyeong = () => {
+    const subRef = useRef(null);
+    const isMobile = useMediaQuery({ maxWidth: 1024 })
     const [scrollPosition, setScrollPosition] = useState(0);
-
-    /// aos 초기화
-    useEffect(() => {
-        AOS.init();
-    })
 
     /// scroll 이벤트
     const updateScroll = () => {
         setScrollPosition(window.scrollY || document.documentElement.scrollTop);
     };
+
+    /// scroll 이벤트
+    const handleScroll = () => {
+        window.scrollTo({top: subRef.current.offsetTop + 48, behavior:'smooth'});
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", updateScroll);
+
+        /// AOS 초기화
+        AOS.init();
+    }, [scrollPosition]); 
+
 
     return (
         <>
@@ -39,7 +51,7 @@ const Gwangmyeong = () => {
                     <div className={styles.container}>
                         <div className={styles.mainWrap}>
                             <div className={styles.mainTitle}>
-                                <h2>00<br/>찾자</h2>
+                                <h2>광명<br/>찾자</h2>
                                 
                                 <p>우리동네</p>
                                 <p className={styles.lineText}><span>모</span><hr/><span>든</span></p>
@@ -51,12 +63,20 @@ const Gwangmyeong = () => {
                                     <img src={screenshot2} alt="목업이미지"/>
                                 </div>
                                 <div className={styles.img_appIcon}>
-                                    <img src={appIcon} alt="어플아이콘"/>
+                                    <img src={IconApp} alt="어플아이콘"/>
                                 </div>
                             </div>
+
+                            {
+                                isMobile ?
+                                <button type="button" className={styles.icon_moveArrow} onClick={handleScroll}>
+                                    <img src={IconArrow} alt="화살표아이콘"/>
+                                </button> : 
+                                ''
+                            }
                         </div>
 
-                        <div className={styles.subWrap}> 
+                        <div className={styles.subWrap} ref={subRef}> 
                             <div className={styles.subTitle}>
                                 <span>
                                     우리가 이걸 왜 만들었는지
@@ -68,7 +88,7 @@ const Gwangmyeong = () => {
                                     <p>간단함</p>
                                     <p>편리함</p>
                                 
-                                    <img className={styles.img_arrowDown} src={arrowDown} alt="화살표"/>
+                                    <img className={styles.img_arrowDown} src={IconArrowDown} alt="화살표"/>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +116,7 @@ const Gwangmyeong = () => {
                             </div>
                         </div>
 
-                        <div className={`${styles.updateTitle} ${scrollPosition > 2000 ? styles.dark : ''}`}>
+                        <div className={`${styles.updateTitle} ${scrollPosition > (isMobile ? 1000 : 2000) ? styles.dark : ''}`}>
                             <i className={styles.moonOrigin}></i>
 
                             <div className={styles.night}>                            
@@ -113,7 +133,7 @@ const Gwangmyeong = () => {
                                 <span className={styles.star11}></span>
                             </div>
 
-                            <div className={`${styles.contentTitle} ${scrollPosition > 2000 ? styles.dark : ''}`}>
+                            <div className={`${styles.contentTitle} ${scrollPosition > (isMobile ? 1000 : 2000) ? styles.dark : ''}`}>
                                 <small>거래 · 업데이트</small>
                                 <h3 className={styles.dark}>
                                     아침, 저녁<br/>
@@ -157,7 +177,7 @@ const Gwangmyeong = () => {
 
                 <section className={styles.detailPage}>
                     <div className={styles.container}>
-                        <div className={styles.mockupWrap}>
+                        <div className={`${styles.mockupWrap} ${scrollPosition > (isMobile ? 3200 : '') ? styles.active : ''}`}>
                             <div className={styles.img_mockupBig}>
                                 <img src={screenshot3} alt="목업이미지"/>
                             </div>
@@ -229,12 +249,12 @@ const Gwangmyeong = () => {
                         </div>
 
                         <div className={styles.btnWrap}>
-                            <a href="/">
-                                <img src={appleLogo} alt="애플로고"></img>
+                            <a href="/" target="_blank">
+                                <img src={IconApple} alt="애플로고"></img>
                                 App Store
                             </a>
-                            <a href="/">
-                                <img src={googleLogo} alt="구글로고"></img>
+                            <a href="https://play.google.com/store/apps/details?id=com.app.findgwangmyeong" target="_blank">
+                                <img src={IconGoogle} alt="구글로고"></img>
                                 Google Play
                             </a>
                         </div>
