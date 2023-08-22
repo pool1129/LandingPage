@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useMediaQuery } from 'react-responsive';
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import styles from './header.module.scss';
 
@@ -50,7 +50,7 @@ export default function  Header() {
                         <ul className={styles.headerMenuList}>
                             {MENULIST.map((menu, index) => (
                                 <li key={index}>
-                                    <a href={menu.url}>{menu.title}</a>
+                                    <Link to={menu.url}>{menu.title}</Link>
                                     <button type="button"><VscChevronRight/></button>
                                 </li>
                             ))}
