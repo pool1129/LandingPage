@@ -249,7 +249,7 @@ const Gwangmyeong = () => {
                         </div>
 
                         <div className={styles.btnWrap}>
-                            <a href="/" target="_blank">
+                            <a href="https://apps.apple.com/kr/app/%EA%B4%91%EB%AA%85%EC%B0%BE%EC%9E%90/id6451822761" target="_blank">
                                 <img src={IconApple} alt="애플로고"></img>
                                 App Store
                             </a>
