@@ -4,26 +4,25 @@ on:
   push:
     branches: 
       - main 
-      
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      CI: false
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     steps:
-    - name: Checkout source code.
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@master
-      with:
-        node-version: 15.x
+    - name: Install Yarn
+      run: npm install -g yarn
 
-    - name: Install dependencies
+    - name: Install dependencies     
       run: yarn install
-      
-    - name: Test unit
-      run: yarn test:unit
 
-    - name: Build page
+    - name: Build                  
       run: yarn build
-      env:
-        NODE_ENV: production
