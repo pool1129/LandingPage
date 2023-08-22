@@ -1,38 +1,37 @@
-name: Deploy React with Github Actions
+name: findGwangmyeong
 
 on:
-  workflow_dispatch:
   push:
-    branches: [ main ]
-
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+    branches: 
+      - main 
 
 jobs:
-  # Build job
-  build:
+  build:      
     runs-on: ubuntu-latest
+
+    env:
+      CI: false
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/configure-pages@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          # cache: 'npm'
+    - uses: actions/checkout@v3
 
-      - run: npm ci --legacy-peer-deps
-      - run: npm run build
-        env:
-          CI: false
+    - name: Install Yarn
+      run: npm install -g yarn
 
-      - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: 'build/'
+    - name: Install dependencies     
+      run: yarn install
 
-  # Deploy job
+    - name: Build                  
+      run: yarn build
+
+    - name: Upload pages artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: 'build/'
+
   deploy:
     needs: build
     permissions:
