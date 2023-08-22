@@ -21,15 +21,9 @@ jobs:
         with:
           node-version: 16
           # cache: 'npm'
-          
-      - name: Install Yarn
-        run: npm install -g yarn
-  
-      - name: Install dependencies     
-        run: yarn install
 
       - run: npm ci --legacy-peer-deps
-      - run: yarn build
+      - run: npm run build
         env:
           CI: false
 
