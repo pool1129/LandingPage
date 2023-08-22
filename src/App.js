@@ -14,7 +14,8 @@ function App() {
         <Header/>
         <Routes>
           <Route path="/" element={<Gwangmyeong/>}/>
-          <Route path="/news" element={<News/>}/>
+          <Route path="gwangmyeong" element={<Gwangmyeong/>}/>
+          <Route path="news" element={<News/>}/>
         </Routes>
       </HashRouter>
 
