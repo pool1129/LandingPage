@@ -51,7 +51,7 @@ const Gwangmyeong = () => {
                     <div className={styles.container}>
                         <div className={styles.mainWrap}>
                             <div className={styles.mainTitle}>
-                                <h2>광명<br/>찾자</h2>
+                                <h2>00<br/>찾자</h2>
                                 
                                 <p>우리동네</p>
                                 <p className={styles.lineText}><span>모</span><hr/><span>든</span></p>
