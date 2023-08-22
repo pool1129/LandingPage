@@ -10,7 +10,7 @@ import News from './page/news';
 function App() {
   return (
     <>
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Header/>
         <Routes>
           <Route path="/" element={<Gwangmyeong/>}/>
