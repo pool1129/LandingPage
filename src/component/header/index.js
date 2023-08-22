@@ -67,21 +67,21 @@ const MENULIST = [
     {
         id: 1,
         title: '광명찾자',
-        url: 'gwangmyeong'
-    },
-    {
-        id: 2,
-        title: '광명찾자',
         url: ''
     },
     {
-        id: 4,
-        title: '광명찾자',
-        url: '/'
+        id: 2,
+        title: '공지사항',
+        url: 'news'
+    },
+    {
+        id: 3,
+        title: '공지사항',
+        url: '#/news'
     },
     {
         id: 4,
         title: '공지사항',
-        url: 'news'
-    }
+        url: '/news'
+    },
 ]
