@@ -49,8 +49,8 @@ export default function  Header() {
 
                         <ul className={styles.headerMenuList}>
                             {MENULIST.map((menu, index) => (
-                                <li key={index}>
-                                    <Link to={menu.url}>{menu.title}</Link>
+                                <li key={index} onClick={mMenuHandler}>
+                                    <Link to={menu.url}>{menu.title}</Link >
                                     <button type="button"><VscChevronRight/></button>
                                 </li>
                             ))}
@@ -73,15 +73,5 @@ const MENULIST = [
         id: 2,
         title: '공지사항',
         url: 'news'
-    },
-    {
-        id: 3,
-        title: '공지사항',
-        url: '#/news'
-    },
-    {
-        id: 4,
-        title: '공지사항',
-        url: '/news'
     },
 ]

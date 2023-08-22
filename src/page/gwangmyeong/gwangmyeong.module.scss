@@ -698,7 +698,7 @@ main {
 
     .mockupWrap{
         display: flex;
-        transition: transform 1s ease-in-out;
+        transition: transform 0.75s ease-in-out;
 
         @include mobile{ 
             position: relative;

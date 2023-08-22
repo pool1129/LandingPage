@@ -6,7 +6,7 @@
     top: 0;
     z-index: 900;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background: rgba(0, 0, 0, .5);
     display: flex;
     align-items: center;
@@ -26,13 +26,14 @@
     }
 
     h3 {
-        @include fontSize(24px);
+        font-size: 24px;
         padding: 50px 30px 50px;
         border-bottom: 2px solid #171919; 
         text-align: center;
         
         @include mobile{ 
             padding: 30px 10px 30px;
+            font-size: 15px;
         }
     }
 
