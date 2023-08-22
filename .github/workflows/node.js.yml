@@ -12,11 +12,14 @@ jobs:
     - name: Checkout source code.
       uses: actions/checkout@v3
 
+    - name: Install Yarn
+      run: npm install -g yarn
+
     - name: Check Node v
       run: node -v
       
-    - name: Install dependencies
-      run: yarn install --frozen-lockfile
+    - name: Install dependencies     
+      run: yarn install
 
-    - name: Run build
-      run: yarn run build
+    - name: Build                   
+      run: yarn build
