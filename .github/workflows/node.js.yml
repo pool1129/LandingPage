@@ -12,14 +12,18 @@ jobs:
     - name: Checkout source code.
       uses: actions/checkout@v3
 
-    - name: Install Yarn
-      run: npm install -g yarn
+    - name: Set up Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: 18.x
 
-    - name: Check Node v
-      run: node -v
-      
-    - name: Install dependencies     
+    - name: Install dependencies
       run: yarn install
+      
+    - name: Test unit
+      run: yarn test:unit
 
-    - name: Build                   
+    - name: Build page
       run: yarn build
+      env:
+        NODE_ENV: production
