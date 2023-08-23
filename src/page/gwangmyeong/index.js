@@ -51,7 +51,7 @@ const Gwangmyeong = () => {
                     <div className={styles.container}>
                         <div className={styles.mainWrap}>
                             <div className={styles.mainTitle}>
-                                <h2>00<br/>찾자</h2>
+                                <h2>광명<br/>찾자</h2>
                                 
                                 <p>우리동네</p>
                                 <p className={styles.lineText}><span>모</span><hr/><span>든</span></p>
@@ -249,7 +249,7 @@ const Gwangmyeong = () => {
                         </div>
 
                         <div className={styles.btnWrap}>
-                            <a href="/" target="_blank">
+                            <a href="https://apps.apple.com/kr/app/%EA%B4%91%EB%AA%85%EC%B0%BE%EC%9E%90/id6451822761" target="_blank">
                                 <img src={IconApple} alt="애플로고"></img>
                                 App Store
                             </a>
