@@ -177,7 +177,7 @@ const Gwangmyeong = () => {
 
                 <section className={styles.detailPage}>
                     <div className={styles.container}>
-                        <div className={`${styles.mockupWrap} ${scrollPosition > (isMobile ? 3200 : '') ? styles.active : ''}`}>
+                        <div className={`${styles.mockupWrap} ${scrollPosition > (isMobile ? 3000 : '') ? styles.active : ''}`}>
                             <div className={styles.img_mockupBig}>
                                 <img src={screenshot3} alt="목업이미지"/>
                             </div>
