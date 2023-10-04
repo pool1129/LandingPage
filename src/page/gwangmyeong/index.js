@@ -177,7 +177,7 @@ const Gwangmyeong = () => {
 
                 <section className={styles.detailPage}>
                     <div className={styles.container}>
-                        <div className={`${styles.mockupWrap} ${scrollPosition > (isMobile ? 3200 : '') ? styles.active : ''}`}>
+                        <div className={`${styles.mockupWrap} ${scrollPosition > (isMobile ? 3000 : '') ? styles.active : ''}`}>
                             <div className={styles.img_mockupBig}>
                                 <img src={screenshot3} alt="목업이미지"/>
                             </div>
@@ -249,7 +249,7 @@ const Gwangmyeong = () => {
                         </div>
 
                         <div className={styles.btnWrap}>
-                            <a href="/" target="_blank">
+                            <a href="https://apps.apple.com/kr/app/%EA%B4%91%EB%AA%85%EC%B0%BE%EC%9E%90/id6451822761" target="_blank">
                                 <img src={IconApple} alt="애플로고"></img>
                                 App Store
                             </a>
