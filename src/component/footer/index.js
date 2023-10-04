@@ -18,9 +18,8 @@ export default function Footer() {
             <footer>
                 <div className={styles.footerContainer}>
                     <ul className={styles.footerList}>
-                        <li><a href="/">서비스 피드백</a></li>
                         <li><a onClick={togglePrivacy}>개인정보 처리방침</a></li>
-                        <li><a href="/">서비스 문의</a></li>
+                        <li><a href="https://open.kakao.com/o/sPB3tYBf" target="_blank">서비스 문의</a></li>
                     </ul>
 
                     <div className={styles.footerCopy}>

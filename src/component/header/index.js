@@ -20,7 +20,7 @@ export default function  Header() {
         <header>
             <div className={styles.headerContainer}>
                 <div className={styles.headerLogo}>
-                    <a href="/"></a>
+                    <a href=""></a>
                 </div>
 
                 {
